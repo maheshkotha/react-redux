@@ -1,19 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Counter from './features/counter/Counter';
-import PostsList from './features/posts/PostsList';
-import AddPostForm from './features/posts/AddPostForm';
+import React from 'react'
+import AllProducts from './components/AllProducts'
+import SpecificProduct from './components/SpecificProduct'
+import AddNewProduct from './components/AddNewProduct'
+import UpdateProduct from './components/UpdateProduct'
+import DeleteProduct from './components/DeleteProduct'
 
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Counter />
-      <AddPostForm />
-      <PostsList />
+    <div>
+      <AllProducts />
+      <SpecificProduct />
+      <AddNewProduct />
+      <UpdateProduct productId={4} />
+      <DeleteProduct productId={1}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
